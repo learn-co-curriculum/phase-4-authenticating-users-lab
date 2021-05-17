@@ -1,4 +1,4 @@
-# Session Controller Lab
+# Authenticating Users Lab
 
 ## Learning Goals
 
