@@ -46,41 +46,40 @@ We'll need to create the routes and controller methods to handle each of these f
 
 ### Sessions
 
-1. Generate these routes:
+- Generate these routes:
 
-   - `POST /login`: run the `SessionsController#create` method
-   - `DELETE /logout`: run the `SessionsController#destroy` method
+  - `POST /login`: run the `SessionsController#create` method
+  - `DELETE /logout`: run the `SessionsController#destroy` method
 
-2. Create a sessions controller.
+- Create a sessions controller.
 
-   **Note:** If you use the generators to generate your controllers, be sure to
-   pass the `--no-test-framework` flag to avoid generating unneeded files:
-   `rails g controller Sessions --no-test-framework`
+  - **Note:** If you use the generators to generate your controllers, be sure to
+    pass the `--no-test-framework` flag to avoid generating unneeded files:
+    `rails g controller Sessions --no-test-framework`
 
-3. Make a `SessionsController#create` method. It should:
+- Make a `SessionsController#create` method. It should:
 
-   - Find a user in the database using the username from `params`
-   - Save the user's ID to the session hash
-   - Return the user as a JSON object
+  - Find a user in the database using the username from `params`
+  - Save the user's ID to the session hash
+  - Return the user as a JSON object
 
-4. Make a `SessionsController#destroy` method. It should:
+- Make a `SessionsController#destroy` method. It should:
 
-   - Remove the user ID from the session hash
-   - Return an empty response with a 204 No Content status code
+  - Remove the user ID from the session hash
+  - Return an empty response with a 204 No Content status code
 
 ### Users
 
-1. Generate these routes:
+- Generate these routes:
 
-   - `GET /me`: run the `UsersController#show` method
+  - `GET /me`: run the `UsersController#show` method
 
-2. Create a users controller.
+- Create a users controller.
 
-   **Note:** If you use the generators to generate your controllers, be sure to
-   pass the `--no-test-framework` flag to avoid generating unneeded files:
-   `rails g controller Users --no-test-framework`
+  - **Note:** If you use the generators to generate your controllers, be sure to
+    pass the `--no-test-framework` flag to avoid generating unneeded files:
+    `rails g controller Users --no-test-framework`
 
-3. Make a `UsersController#show` method. It should:
-
-   - Find a user in the database using the user id from the session hash
-   - Return the user as a JSON object
+- Make a `UsersController#show` method. It should:
+  - Find a user in the database using the user id from the session hash
+  - Return the user as a JSON object
